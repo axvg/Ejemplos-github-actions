@@ -1,0 +1,11 @@
+name: manual worflow
+
+on: [push]
+
+jobs:
+  manual-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: python deploy_manual.py
