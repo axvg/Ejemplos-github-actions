@@ -9,7 +9,7 @@ jobs:
       image: ghcr.io/jenkinsci/jenkinsfile-runner:master
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
       - name: run Jenkinsfile
         uses: jenkinsci/jfr-container-action@master
