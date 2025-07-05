@@ -1,0 +1,18 @@
+name: jenkins CI
+
+on: [push]
+
+jobs:
+  jenkins-pipeline:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/jenkinsci/jenkinsfile-runner:master
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: run Jenkinsfile
+        uses: jenkinsci/jfr-container-action@master
+        with:
+          jenkinsfile: jenkins-pipeline/Jenkinsfile
+          pluginstxt: jenkins-pipeline/plugins.txt
