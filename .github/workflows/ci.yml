@@ -16,11 +16,11 @@ jobs:
         run: chmod +x index.sh
 
       # 3) Ejecutamos nuestro script
-      - name: Ejecutar index.sh
-        run: bash index.sh
+      - name: Ejecutar index.sh (server)
+        run: bash index.sh # con run se ejecuta un comando directamente en el runner (server)
 
       - name: Setup py
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v4 # con uses se usa una accion predefinida que se puede encontrar en GitHub marketplace
         with:
           python-version: "3.x"
 
