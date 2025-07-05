@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                checkout scm
+                bash 'chmod +x index.sh'
+                bash './index.sh'
+            }
+        }
+        stage('deploy') {
+            steps {
+                python3 'python deploy.py'
+            }
+        }
+    }
+}
