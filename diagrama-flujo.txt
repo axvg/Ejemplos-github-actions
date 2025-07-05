@@ -1,0 +1,9 @@
+[push] -> [checkout] -> [setup-python] -> [build] -> [test] -> [deploy]
+
+Leyenda:
+* [push]: Evento que dispara el workflow, en este caso un commit al repositorio.
+* [checkout]: Accion que descarga el codigo del repositorio en el runner.
+* [setup-python]: Accion que instala la version de Python especificada.
+* [build]: Job o paso que compila el codigo o construye el paquete.
+* [test]: Job o paso que ejecuta las pruebas automatizadas.
+* [deploy]: Job o paso que despliega la aplicacion en un entorno.
